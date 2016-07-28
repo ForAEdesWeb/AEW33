@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 1.6//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
+<extension version="2.5" type="template" method="upgrade" client="site">
+	<name>ja_sugite</name>
+	<version>1.1.3</version>
+	<creationDate>14 Nov 2014</creationDate>
+	<author>JoomlArt.com</author>
+	<authorEmail>webmaster@joomlart.com</authorEmail>
+	<authorUrl>http://www.t3-framework.org</authorUrl>
+	<copyright>Copyright (C), J.O.O.M Solutions Co., Ltd. All Rights Reserved.</copyright>
+	<license>license GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<t3>
+		<base>base-bs3</base>
+	</t3>
+	<description>
+		<![CDATA[
+			<div class="overview-header">
+			<h2>
+			  <small style="display: block;">Responsive Joomla template for Designer Portfolio and corporate portfolio for both Joomla 2.5 and Joomla 3 - <strong>JA Sugite</strong>.</small>
+			</h2>
+			<p>Together with Parallax design and the clean look, <strong>JA Sugite</strong> is sure to impress just about anyone. This beautiful Joomla template supports the 
+			favorite Joomla blogging component - EasyBlog, RTL language layout at default, Bootstrap 3 at core and stays stunning on all type of devices.</p>
+			<p>Thanks to the T3 Framework, <strong>JA Sugite</strong> is highly compatible with numerous 3rd party Joomla templates. It has a 
+			flexible layout structure, and is easy to customize with ThemeMagic or via Layout Configuration - the crazy cool features of 
+			T3 Framework.</p>
+			</div>
+				]]>
+	</description>
+	<files>
+		<filename>component.php</filename>
+		<filename>error.php</filename>
+		<filename>favicon.ico</filename>
+		<filename>index.html</filename>
+		<filename>index.php</filename>
+		<filename>offline.php</filename>
+		<filename>template_preview.png</filename>
+		<filename>template_thumbnail.png</filename>
+		<filename>templateDetails.xml</filename>
+		<filename>templateHelper.php</filename>
+		<filename>templateHook.php</filename>
+		<filename>templateInfo.php</filename>
+		<filename>thememagic.xml</filename>
+		<folder>css</folder>
+		<folder>etc</folder>
+		<folder>fonts</folder>
+		<folder>html</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+		<folder>less</folder>
+		<folder>language</folder>
+		<folder>tpls</folder>
+	</files>
+	
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.tpl_ja_sugite.ini</language>
+		<language tag="en-GB">en-GB/en-GB.tpl_ja_sugite.sys.ini</language>
+	</languages>
+
+	<positions>
+		<position>languageswitcherload</position>
+		<position>features-intro</position>
+		<position>footer</position>
+		<position>footer-1</position>
+		<position>footer-2</position>
+		<position>footer-3</position>
+		<position>footer-4</position>
+		<position>footer-5</position>
+		<position>footer-info</position>
+		<position>head-search</position>
+		<position>mainnav</position>
+		<position>navhelper</position>
+		<position>breadcrumbs</position>
+		<position>off-canvas</position>
+		<position>masthead</position>
+		<position>video-background</position>
+		<position>portfolio-menu</position>
+		<position>position-0</position>
+		<position>position-1</position>
+		<position>sidebar-1</position>
+		<position>sidebar-2</position>
+		<position>slideshow</position>
+		<position>position-2</position>
+		<position>position-3</position>
+		<position>position-4</position>
+		<position>position-5</position>
+		<position>position-6</position>
+		<position>position-7</position>
+		<position>position-8</position>
+		<position>position-9</position>
+		<position>position-10</position>
+		<position>position-11</position>
+		<position>position-12</position>
+		<position>debug</position>
+	</positions>
+
+	<config>
+		<fields name="params" addfieldpath="/plugins/system/t3/includes/depend">
+            <!-- Sample for add or disable template parameters -->
+            <fieldset name="items_params" label="T3_PARAMS_ITEMS_DISPLAY">
+                <field
+                        name="itemlg"
+                        type="text"
+                        global="4"
+                        label="TPL_NUMBER_IN_GRID_LG"
+                        description="TPL_NUMBER_IN_GRID_LG_DESC" />
+                <field
+                        name="itemmd"
+                        type="text"
+                        global="3"
+                        label="TPL_NUMBER_IN_GRID_MD"
+                        description="TPL_NUMBER_IN_GRID_MD_DESC" />
+                <field
+                        name="itemsm"
+                        type="text"
+                        global="2"
+                        label="TPL_NUMBER_IN_GRID_SM"
+                        description="TPL_NUMBER_IN_GRID_SM_DESC" />
+                <field
+                        name="itemsmx"
+                        type="text"
+                        global="1"
+                        label="TPL_NUMBER_IN_GRID_SMX"
+                        description="TPL_NUMBER_IN_GRID_SMX_DESC" />
+                <field
+                        name="itemxs"
+                        type="text"
+                        global="1"
+                        label="TPL_NUMBER_IN_GRID_XS"
+                        description="TPL_NUMBER_IN_GRID_XS_DESC" />
+                <field
+                        name="gutter"
+                        type="text"
+                        global="1"
+                        label="TPL_GUTTER_IN_GRID"
+                        description="TPL_GUTTER_IN_GRID_DESC" />
+            </fieldset>
+			<!-- Sample for add or disable template parameters -->
+			<!--fieldset name="menu_params" label="T3_PARAMS_MEGAMENU">
+				<field name="group_disable" type="t3depend" function="@group">
+					<option for="menu_as_bg" value="no">menu_as_bg</option>
+				</field>
+			</fieldset-->
+			
+		</fields>
+	</config>
+
+	<updateservers>
+		<server type="collection">http://update.joomlart.com/service/tracking/list.xml</server>
+	</updateservers>
+
+</extension>

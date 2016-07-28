@@ -1,0 +1,1605 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+ 
+
+// --------------------------------------------------
+// BOOTSTRAP COMPONENTS STYLES
+// --------------------------------------------------
+
+//
+// TITLES
+// --------------------------------------------------
+
+// Page header
+// -----------
+.page-header {
+  border-bottom: 1px solid @page-header-border-color;
+  padding-bottom: ((@line-height-computed / 2) - 1);
+  margin: 0 0 @line-height-computed;
+}
+
+.page-title,
+.page-header h1 {
+  color: @black;
+  line-height: 1;
+  margin: 0;
+
+  @media screen and (max-width: @screen-xs-max) {
+    font-size: 34px;
+  }
+}
+
+
+// Page Subheader
+// --------------
+.page-subheader {
+  border-bottom: 1px solid @t3-border-color;
+  margin: 0 0 @line-height-computed;
+  .clearfix();
+}
+
+.page-subtitle,
+.page-subheader h2 {
+  line-height: 1;
+  margin: 0;
+}
+
+.page-header + .page-subheader {
+  margin-top: -@line-height-computed; //If there is page header, then omit the space before page subheader
+}
+
+
+// Article Header
+// --------------
+.article-header {
+}
+
+.article-title,
+.article-header h1 {
+  margin: 0 0 @line-height-computed 0;
+}
+
+// Smaller "Article Title" in Blog and List layout
+h2.article-title,
+.article-header h2 {
+}
+
+
+// Item Header
+// -----------
+.item-title {
+  font-weight: bold;
+}
+
+
+
+//
+// MASTHEAD & JUMBOTRON
+// --------------------------------------------------
+
+// Feature Row
+// --------------------------
+.row-feature {
+  padding-top: @t3-global-padding * 2;
+  padding-bottom: @t3-global-padding * 2;
+
+  @media screen and (min-width: @screen-md) {
+    padding-top: @t3-global-padding * 4;
+    padding-bottom: @t3-global-padding * 4;
+  }
+
+
+  &.row-feature-primary {
+    background: @brand-primary;
+    color: lighten(@brand-primary, 50%);
+    padding-top: 0;
+    padding-bottom: 0;
+
+    .row-feature-title {
+      color: @white;
+    }
+
+  }
+
+  &.row-feature-secondary {
+    background: @brand-secondary;
+    color: #a0adbb;
+    overflow: hidden;
+
+    @media screen and (max-width: @screen-md) {
+      position: relative;
+    }
+
+    .row-feature-secondary  {
+      position: relative;
+    }
+    
+    .row-feature-title,
+    .about-us h3 {
+      color: @white;
+    }
+
+    @media screen and (max-width: @screen-xs-max) { 
+      .btn-lg {
+        padding: @t3-global-padding / 2 @t3-global-padding;
+        font-size: @t3-font-size-small;
+      }
+    }
+
+  }
+
+  &.row-feature-graydark {
+    background: @gray-dark;
+    color: @white;
+
+    .row-feature-title {
+      color: @white;
+    }
+  }
+
+  &.row-feature-full {
+    text-align: center;
+    padding-bottom: 0;
+    padding-top: 0;
+
+    .row-feature-full {
+      padding-left: 0;
+      padding-right: 0;
+      @media screen and (max-width: @screen-xs-max) {
+        padding-left: @grid-gutter-width /2;
+        padding-right: @grid-gutter-width /2;
+      }
+    }
+
+    .container > .row {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    .container {
+      width: 100% !important;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .btn {
+      margin-top: @t3-global-margin;
+    }
+  }
+
+  &.row-feature-highlight-title {
+    position: relative;
+    padding-top: @t3-global-padding * 6;
+    .row-feature-title {
+      background: @brand-primary;
+      color: @white;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      left: 0;
+      padding: @t3-global-padding 0;
+      margin: 0;
+
+      &:before {
+        border-top: 10px solid @brand-primary;
+        border-left: 10px solid rgba(0, 0, 0, 0);
+        border-right: 10px solid rgba(0, 0, 0, 0);
+        bottom: 0;
+        content: "";
+        height: 0;
+        left: 50%;
+        margin-left: -10px;
+        margin-bottom: -10px;
+        position: absolute;
+        width: 0;
+      }
+    }
+  }
+
+
+  // Video
+  // ------------------
+  &.row-feature-video {
+    padding: 0;
+    padding-bottom: 0;
+
+    .row-feature-video {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .video-shuffle-wrap {
+      overflow: hidden; 
+      position: relative;
+      z-index: 1;
+
+      .mask {
+        background: @black;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        .opacity(0.75);
+        z-index: 2;
+      }
+
+      .poster {
+        width: auto;
+        height: 100%;
+        min-height: 300px;
+
+        @media (min-width: @screen-sm-min) {
+          min-height: 400px;
+        }
+
+        @media (min-width: @screen-md-min) {
+          width: 100%;
+          height: auto;
+          min-height: 400px;
+        }
+      }
+
+      .video-shuffle iframe {
+        min-width: 100% !important;
+        min-height: 100% !important;
+        width: auto !important;
+        height: auto !important;
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: none;
+      }
+
+      .content {
+        color: @white;
+        left: 0;
+        padding-top: @t3-global-padding * 2;
+        position: absolute;
+        width: 100%;
+        z-index: 3;
+
+        @media (min-width: @screen-md-min) {
+          left: 50%;
+          margin-left: -40%;
+          width: 80%;
+        }
+
+        @media (min-width: @screen-lg-min) {
+          margin-left: -30%;
+          width: 60%;
+          left: 50%;
+          padding-top: @t3-global-padding * 3;
+          padding-bottom: @t3-global-padding * 2;
+        }
+
+        .inner {
+          padding: 0 @t3-global-padding;
+
+          @media (min-width: @screen-lg-min) {
+            padding: 0 @t3-global-padding * 3;
+          }
+
+          @media (min-width: 1200px) and (max-width: 1400px) {
+            padding: 0 @t3-global-padding;
+          }
+        }
+
+        h3 {
+          font-size: @font-size-large * 1.5;
+          margin-top: 0;
+          margin-bottom: @t3-global-margin;
+
+          @media screen and (min-width: @screen-sm) {
+            font-size: @font-size-h1;
+          }
+        }
+
+        // Video description
+        // -----------------
+        p {
+          display: none;
+        }
+
+        @media screen and (min-width: @screen-sm-min) {
+          p {
+            display: block;
+            margin-bottom: @t3-global-margin * 2;
+          }  
+        }
+        
+
+        a {
+          background: url("@{t3-image-path}/play-icon.png") no-repeat left top;
+          display: block;
+          height: 74px;
+          margin: 0 auto;
+          overflow: hidden;
+          text-indent: -999em;
+          width: 74px;
+          .opacity(0.6);
+
+          &:hover, &:focus, &:active {
+            .opacity(1);
+          }
+        }
+      }
+    }
+  }
+
+  &.row-feature-border {
+    border-bottom: 2px solid #e7e7e7;
+
+    .container {
+      padding-left: 0;
+      padding-right: 0;
+      width: 100%;
+
+      .row {
+        .container {
+          padding-left: 0;
+          padding-right: 0;
+          width: 100%;
+
+          h3 {
+            @media screen and (max-width: @screen-lg) {
+              margin-left: 0;
+              margin-right: 0;
+            }
+            @media screen and (max-width: @screen-xs) {
+              font-size: 32px;
+              padding-left: @grid-gutter-width / 2; 
+              padding-right: @grid-gutter-width / 2;
+            }
+            
+          }
+        }
+      }
+    }
+
+  }
+
+  &.row-feature-bg {
+    background: url("@{t3-image-path}/custom-bg.png") no-repeat bottom right;
+
+    @media screen and (max-width: @screen-xs-max) {
+      .container .row {
+        margin-left: 0;
+        margin-right: 0;
+        h3 {
+          font-size: 32px;
+        }
+      }
+    }
+
+    .row-feature-bg {
+      background: none;
+
+      @media screen and (max-width: @screen-xs) {
+        p {
+          padding: 0;
+        }
+      }
+    }
+  }
+
+  .row-feature-title {
+    text-align: center;
+    margin-bottom: @t3-global-margin * 2;
+    margin-top: 0;
+    color: @black;
+
+    @media screen and (max-width: @screen-xs-max) {
+      font-size: 32px;
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    .fa-heart {
+      color: #e74c3c;
+    }
+  }
+
+  // Module description
+  // ------------------
+  .module-intro {
+    display: block;
+    margin: -@t3-global-margin auto @t3-global-margin !important;
+    padding: 0;
+
+    @media screen and (min-width: @screen-sm) {
+      margin: -@t3-global-margin auto (@t3-global-margin * 3) !important;
+    }
+  }
+
+  @media (max-width: @screen-sm-max) {
+    .row-feature-ct .module-intro {
+      margin-bottom: (@t3-global-margin * 2) !important;
+      padding-left: @grid-gutter-width / 2;
+      padding-right: @grid-gutter-width / 2;
+    }  
+  }
+  
+}
+
+// Jumbotron (jumbotron.less)
+// --------------------------
+.jumbotron {
+
+  h1, h2, h3 {
+    margin-top: 0;
+    word-wrap: break-word;
+  }
+
+  p {
+    font-size: 20px;
+
+    @media screen and (min-width: @grid-float-breakpoint) {
+      font-size: 24px;
+    } 
+    // Remove margin on last paragraph
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  h1 {
+    font-size: 36px;
+
+    @media screen and (min-width: @grid-float-breakpoint) {
+      font-size: @font-size-h1;
+    }  
+  }
+
+  h2 {
+    font-size: 32px;
+
+    @media screen and (min-width: @grid-float-breakpoint) {
+      font-size: @font-size-h2;
+    }  
+  }
+
+  h3 {
+    font-size: 28px;
+
+    @media screen and (min-width: @grid-float-breakpoint) {
+      font-size: @font-size-h3;
+    }  
+  }
+
+  .container & {
+    border-radius: @border-radius-large; // Only round corners at higher resolutions if contained in a container
+  }
+
+  @media screen and (min-width: @grid-float-breakpoint) {
+    .container & {
+    }
+    h1 {
+    }
+  }
+
+}
+
+// Mashead
+// --------
+.masthead {
+  padding: (@t3-global-padding * 2) 30px;
+  text-align: center;
+
+  p {
+    // Remove margin on last paragraph
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @media screen and (min-width: @grid-float-breakpoint) {
+    padding: (@t3-global-padding * 4) 0;
+
+    h1 {
+      font-size: @font-size-base * 7;
+    }
+
+    p {
+      font-size: @font-size-base * 2;
+    }
+
+    // Bigger mashead btn
+    .btn-lg {
+      margin-top: @line-height-computed;
+      padding: 18px 42px;
+      font-size: @font-size-base * 1.5;
+    }
+  }
+
+}
+
+
+// T3 Jumbotron Primary
+// --------------------
+.jumbotron-primary {
+  background-color: @brand-primary;
+  color: lighten(@brand-primary, 50%);
+
+  h1, h2, h3 {
+    color: @white;
+  }
+
+  p {
+    color: @white;
+  }
+
+  .btn-primary {
+    border-color: #fff;
+    color: @white;
+
+    &:hover, &:active, &:focus {
+      border-color: @link-hover-color;
+
+      &:after {
+        width: 100%;
+      }
+    }
+
+    &:after {
+      background: @link-hover-color;
+    }
+  }
+}
+
+
+
+//
+// MEDIA
+// --------------------------------------------------
+.media {
+  .media-body {
+    font-size: @t3-font-size-smaller;
+
+    @media screen and (min-width: @grid-float-breakpoint) {
+      font-size: @font-size-base;
+    }
+  }
+}
+
+
+//
+// LABELS & BADGES
+// --------------------------------------------------
+
+// Labels (labels.less)
+// --------------------
+
+.label {
+
+  // Add hover effects, but only for links
+  &[href] {
+    &:hover,
+    &:focus {
+    }
+  }
+
+  // Empty labels collapse automatically (not available in IE8)
+  &:empty {
+    display: none;
+  }
+}
+
+// Colors
+// Contextual variations (linked labels get darker on :hover)
+
+.label-default {
+}
+
+.label-primary {
+}
+
+.label-success {
+}
+
+.label-info {
+}
+
+.label-warning {
+}
+
+.label-danger {
+}
+
+
+// Badges (badges.less)
+// --------------------
+
+// Base classes
+.badge {
+  font-size: 11px;
+
+  // Empty badges collapse automatically (not available in IE8)
+  &:empty {
+    display: none;
+  }
+}
+
+// Hover state, but only for links
+a.badge {
+  &:hover,
+  &:focus {
+  }
+}
+
+// Quick fix for labels/badges in buttons
+.btn .badge {
+  position: relative;
+  top: -1px;
+}
+
+// Quick fix for labels/badges in page-header- NNTH
+.page-header {
+  .label, .badge {
+    vertical-align: middle;
+  }
+}
+
+
+
+//
+// THUMBNAILS  (thumbnails.less)
+// --------------------------------------------------
+
+// Mixin and adjust the regular image class
+.thumbnail {
+  > img {
+  }
+}
+
+// Add a hover state for linked versions only
+a.thumbnail:hover,
+a.thumbnail:focus,
+a.thumbnail.active {
+}
+
+// Image captions
+.thumbnail .caption {
+}
+
+
+
+//
+// ALERTS (alerts.less)
+// --------------------------------------------------
+
+// Base styles
+// -------------------------
+.alert {
+
+  // Headings for larger alerts
+  h4 {
+    color: inherit;
+  }
+
+  // Provide class for links that match alerts
+  .alert-link {
+  }
+
+}
+
+
+// Dismissable alerts
+// ------------------
+.alert-dismissable {
+}
+
+
+// Alternate styles
+// ---------------
+.alert-success,
+.alert-message {
+  background: @panel-info-heading-bg;
+  .alert-variant(@alert-success-bg; @alert-success-border; @alert-success-text);
+}
+
+.alert-info,
+.alert-notice {
+  background: @panel-info-heading-bg;
+  .alert-variant(@alert-info-bg; @alert-info-border; @alert-info-text);
+}
+
+.alert-warning {
+  background: @state-warning-bg;
+}
+
+.alert-danger,
+.alert-error {
+  background: @panel-danger-heading-bg;
+  .alert-variant(@alert-danger-bg; @alert-danger-border; @alert-danger-text);
+}
+
+
+
+//
+// MEDIA OBJECTS (media.less)
+// Source: http://stubbornella.org/content/?p=497
+// --------------------------------------------------
+
+// Common styles
+// -------------------------
+.media,
+.media .media {
+}
+
+.media:first-child {
+  margin-top: 0;
+}
+
+.media-object {
+  display: block;
+}
+
+.media-heading {
+  margin: 0 0 5px;
+}
+
+
+// Media image alignment
+// -------------------------
+.media {
+  > .pull-left {
+    margin-right: 10px;
+  }
+  > .pull-right {
+    margin-left: 10px;
+  }
+}
+
+
+// Media list variation
+// -------------------------
+.media-list {
+}
+
+
+
+//
+// LIST GROUP (list-groups.less)
+// --------------------------------------------------
+// Base class
+//
+// Easily usable on <ul>, <ol>, or <div>.
+.list-group {
+  // No need to set list-style: none; since .list-group-item is block level
+}
+
+
+// Individual list items
+// -------------------------
+.list-group-item {
+
+  // first and last items
+  &:first-child {
+  }
+  &:last-child {
+  }
+
+  // Align badges within list items
+  > .badge {
+    float: right;
+  }
+  > .badge + .badge {
+    margin-right: 5px;
+  }
+}
+
+// Linked list items
+a.list-group-item {
+
+  .list-group-item-heading {
+  }
+
+  // Hover state
+  &:hover,
+  &:focus {
+  }
+
+  // Active class on item itself, not parent
+  &.active,
+  &.active:hover,
+  &.active:focus {
+
+    // Force color to inherit for custom content
+    .list-group-item-heading {
+      color: inherit;
+    }
+    .list-group-item-text {
+      color: lighten(@list-group-active-bg, 40%);
+    }
+  }
+}
+
+// Custom content options
+// -------------------------
+.list-group-item-heading {
+}
+
+.list-group-item-text {
+}
+
+
+
+//
+// PANELS (panels.less)
+// --------------------------------------------------
+// Base class
+.panel {
+}
+
+// Panel contents
+.panel-body {
+}
+
+
+// Optional heading
+.panel-heading {
+  > .dropdown .dropdown-toggle {
+    color: inherit;
+  }
+}
+
+// Within heading, strip any `h*` tag of it's default margins for spacing.
+.panel-title {
+  > a {
+    color: inherit;
+  }
+}
+
+// Optional footer (stays gray in every modifier class)
+.panel-footer {
+}
+
+
+// Collapsable panels (aka, accordion)
+.panel-group {
+
+  .panel {
+    + .panel {
+    }
+  }
+
+  .panel-heading {
+    + .panel-collapse .panel-body {
+    }
+  }
+
+  .panel-footer {
+    + .panel-collapse .panel-body {
+    }
+  }
+
+}
+
+
+// Contextual variations
+.panel-default {
+}
+
+.panel-primary {
+}
+
+.panel-success {
+}
+
+.panel-warning {
+}
+
+.panel-danger {
+}
+
+.panel-info {
+}
+
+
+
+//
+// WELLS (wells.less)
+// --------------------------------------------------
+// Base class
+.well {
+  blockquote {
+  }
+}
+
+// Sizes
+.well-lg {
+}
+
+.well-sm {
+}
+
+
+
+//
+// MODALS (modals.less)
+// --------------------------------------------------
+// Container that the modal scrolls within
+.modal {
+}
+
+// Shell div to position the modal with bottom padding
+.modal-dialog {
+}
+
+// Actual modal
+.modal-content {
+}
+
+// Modal background
+.modal-backdrop {
+  // Fade for backdrop
+  &.fade { .opacity(0); }
+  &.in { .opacity(.5); }
+}
+
+// Modal header
+// Top section of the modal w/ title and dismiss
+.modal-header {
+}
+// Close icon
+.modal-header .close {
+}
+
+// Title text within header
+.modal-title {
+}
+
+// Modal body
+// Where all modal content resides (sibling of .modal-header and .modal-footer)
+.modal-body {
+}
+
+// Footer (for actions)
+.modal-footer {
+}
+
+// Scale up the modal
+@media screen and (min-width: @screen-sm-min) {
+  .modal-dialog {
+    width: 600px;
+    margin: 30px auto;
+  }
+  .modal-content {
+    .box-shadow(0 5px 15px rgba(0,0,0,.5));
+  }
+}
+
+
+
+//
+// TOOLTIPS (tooltips.less)
+// --------------------------------------------------
+
+// Base class
+.tooltip {
+}
+
+// Wrapper for the tooltip content
+.tooltip-inner {
+}
+
+// Arrows
+.tooltip-arrow {
+}
+
+
+// Module 
+.ezb-mod .mod-post-meta > span + span {
+  background: none !important;
+}
+
+.ezb-mod .mod-item + .mod-item {
+  border-color: #eee;
+}
+
+
+#eblog-wrapper .list-form.tight li > label, 
+#eblog-dialog .list-form.tight li > label {
+  font-size: 10px !important;
+}
+
+
+body #ezblog-dashboard {
+  a {
+    color: @link-color;
+    &:hover, &:focus, &:active {
+      color: @link-hover-color;
+    }
+  }
+
+  .ui-toolbar li.settings form a.buttons {
+    background: @btn-primary-bg;
+    border-color: @btn-primary-border;
+    color: @white !important;
+    &:hover, focus, &:active {
+      background: @btn-primary-border;
+      border-color: @btn-primary-border;
+      color: @white !important;
+    }
+  }
+
+  .buttons {
+    .reset-filter();
+  }
+
+
+  select#entries-action {
+    display: inline-block;
+    height: auto !important;
+    float: left;
+    margin-right: 5px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+  }
+
+  #blog-login {
+    #form-login-username input, 
+    #form-login-password input {
+      font-weight: normal !important;
+    }
+
+    form {
+      input.button {
+        background: none;
+        border: solid 2px @brand-primary;
+        color: @brand-primary;
+        line-height:  1.75;
+        font-weight: 700;
+        text-transform: uppercase;
+        padding: 6px 12px;
+        &:hover, &:focus, &:active {
+          color: @white;
+          background: @brand-primary;
+        }
+      }
+    }
+
+  }
+}
+
+@media screen and (max-width: @screen-md) {
+  .ui-modbody .list-form.reset-ul li {
+    padding-top: 0 !important;
+    word-wrap: inherit;
+     > div {
+      display: inline-block;
+      margin-top: -10px;
+    }
+  }
+
+  #eblog-wrapper {
+    .list-form > li + li, 
+    .list-form > li + li {
+      padding-top: 0 !important; 
+      word-wrap: inherit;
+    }
+
+    .list-form.reset-ul {
+      .si-optiontap {
+        margin-top: -13px !important;
+      }
+
+      input.width-300 {
+        width: 90%;
+      }
+      
+      input.width-250 {
+        width: 95%;
+        margin-bottom: @t3-global-margin / 4;
+      }
+    }
+
+
+  }
+
+  #ezblog-dashboard {
+    .input.publish-location {
+      margin-bottom: @t3-global-margin / 2;
+    }
+
+    .ui-modbody .blogImage  {
+      margin-bottom: @t3-global-margin / 2 !important;
+    }
+
+    .dashboard-option {
+      #save_post_button {
+        margin-top: 0;
+      }
+
+      .has-tooltip {
+        margin-top: @t3-global-margin / 2;
+      }
+
+      .media_manager_button {
+        display: inline-block;
+        margin-top: @t3-global-margin / 2;
+      }
+    }
+
+    #write_container {
+      #category_id {
+        margin-bottom: @t3-global-margin / 2;
+      }
+    }
+
+    #comment-form {
+      li .ui-avatar {
+        float: left !important;
+      }
+
+      .ui-button-option {
+        .clearfix();
+      }
+      .ui-button-option li {
+        margin-bottom: @t3-global-margin / 4;
+      }
+    }
+
+    .dashboard-head .head-option .search-head {
+      width: 90%;
+      &:hover, &:focus, &:active {
+        width: 90%;
+      }
+    }
+
+    #eb-topbar.narrow .ui-toolbar li.settings form {
+      background: none;
+      border: none !important;
+      padding: 0;
+      a {
+        box-shadow: none !important;
+      }
+    }
+  }
+
+}
+
+
+@media screen and (max-width: @screen-xs-max) {
+  #blog-login #form-login-username input, 
+  #blog-login #form-login-password input {
+    width: 90% !important;
+  }
+
+  #ezblog-dashboard .dashboard-avatar {
+    float: left !important;
+  }
+}
+
+@media screen and (max-width: 360px)  {
+  body {
+    
+    #mailtoForm .control-label, 
+    #mailtoForm .formelm label {
+      float: none;
+      width: auto;
+    }
+
+    #mailtoForm .form-group > div {
+      float: none;
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+
+    #mailtoForm .form-group .col-sm-offset-2 {
+      margin-left: 0;
+    }
+
+    .blog-login-helper {
+      li {
+        float: none !important; 
+        display: block !important;
+        width: 100%;
+      }
+
+      li + li {
+        margin-left: 0 !important;
+      }
+    }
+
+    #ezblog-dashboard .dashboard-head .head-option {
+      .search-head {
+        margin-bottom: 5px !important;
+        width: 150px !important; 
+        &:hover, &:focus, &:active {
+          width: 150px !important;
+        }
+      }
+
+      a.buttons {
+        margin-bottom: 10px !important;
+      }
+    }
+
+    #eblog-wrapper.w320 #ezblog-dashboard #private, 
+    #eblog-wrapper.w320 #microblog-video .input {
+      width: 90% !important;
+      margin-bottom: 10px;
+    }
+  }
+
+}
+
+// About us
+.about-us {
+  .text-center {
+    > p {
+      @media screen and (min-width: @screen-md) {
+        font-size: @font-size-large;
+      }
+    }
+  }
+
+  .section  {
+    margin-top: @t3-global-margin; ;
+    margin-bottom: @t3-global-margin;
+
+    @media screen and (min-width: @screen-md) {
+      margin-top: @t3-global-margin * 2;
+      margin-bottom: @t3-global-margin * 2;
+    }
+
+    &.member {
+      > .col-md-3:nth-child(2n+1) {
+        @media screen and (max-width: @screen-md) {
+          clear: both;
+        }
+      }
+    }
+    
+  }
+
+  .show-team {
+    border: solid 1px @gray-lighter;
+    border-left: 3px solid @brand-primary;
+    margin: 0 40px;
+    padding: @t3-global-margin ;
+
+    .info-team {
+      @media screen and (min-width: @screen-sm) {
+        float: left;
+        width: 65%;
+      }
+      
+
+    }
+
+    a.btn-block {
+      display: inline-block;
+      margin-top: @t3-global-margin / 2;
+      width: auto;
+      @media screen and (min-width: @screen-sm) {
+        float: right;
+        margin-top: 0;
+      }
+    }
+  }
+
+  h3 {
+    color: @gray-dark;
+    font-size: 28px;
+  }
+
+  .member-info a.btn {
+    background: none;
+    border: none;
+    height: 36px;
+    line-height: 36px;
+    margin: 0 3px;
+    padding: 0;
+    text-align: center;
+    width: 36px;
+
+    i {
+      color: @gray-dark;
+      font-size: 16px;
+      line-height: 36px;
+      display: block;
+      position: relative;
+      transition: top 0.35s ease 0s;
+    }
+
+    &:hover, &:focus, &:active {
+      background: @brand-primary;
+
+      i {
+        color: @white;
+      }
+    }
+
+    &.btn-facebook {
+      &:hover, &:focus, &:active {
+        background: #3B5998;
+      }
+    }
+
+    &.btn-twitter {
+      &:hover, &:focus, &:active {
+        background: #00ACED;
+      }
+    }
+
+    &.btn-linkedin {
+      &:hover, &:focus, &:active {
+        background: #007BB6;
+      }
+    }
+
+    &.btn-google-plus {
+      &:hover, &:focus, &:active {
+        background: #DD4B39;
+      }
+    }
+
+    &.btn-instagram {
+      &:hover, &:focus, &:active {
+        background: #517FA4;
+      }
+    }
+
+    &.btn-skype {
+      &:hover, &:focus, &:active {
+        background: #0078CA;
+      }
+    }
+  }
+
+  .thumbnail {
+    border: none; 
+    background: none;
+    border-radius: 0;
+    box-shadow: none;
+    overflow: hidden;
+    position: relative;
+    padding: 0;
+    z-index: 1;
+    .caption {
+      h5 {
+        color: @gray-dark;
+        font-size: @font-size-base;
+        font-weight: 700;
+        margin-bottom: 0;
+      }
+
+      p {
+        color: @gray-light;
+        font-size: @t3-font-size-small;
+      }
+
+      .member-detail {
+        color: @text-color;
+        font-size: @font-size-base;
+      }
+    }
+  }
+  
+  .member  {
+    .thumbnail {
+      margin: 0 0 @t3-global-margin / 2 ;
+
+      @media screen and (min-width: @screen-sm) {
+        margin-bottom: 0;
+      }
+
+      img {
+        width: 100%;
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -webkit-transition: -webkit-transform 0.6s, opacity 0.1s 0.2s;
+        transition: transform 0.6s, opacity 0.1s 0.2s;
+      }
+
+      .member-follow {
+        overflow: hidden;
+        position: relative;
+        z-index: 2;
+
+        > div {
+          bottom: -50%;
+          .opacity(0);
+          margin: 0;
+          position: absolute;
+          width: 100%;
+          transform: translateY(100%);
+          -webkit-transform: translateY(100%);
+          -webkit-transition: -webkit-transform 0.6s, opacity 0.1s 0.2s;
+          transition: transform 0.6s, opacity 0.1s 0.2s;
+          .member-info {
+            float: none;
+            margin: 0 auto;
+            padding: 0;
+            text-align: center;
+
+            @media screen and (min-width: @screen-md) {
+              float: right; 
+              margin: 0;
+            }
+          }
+
+          span {
+            color: @gray-dark;
+            display: none; 
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 35px;
+            margin: 0 0 0 (@t3-global-margin / 2); 
+            padding: 0;
+            text-transform: uppercase;
+
+            @media screen and (min-width: @screen-md) {
+              display: inline-block;
+            }
+          }
+
+          a.btn {
+            height: 35px;
+            line-height: 35px;
+            margin: 0;
+            vertical-align: top;
+            width: 35px;
+
+            @media screen and (min-width: @screen-md) {
+              float: left;
+            }
+
+            i {
+              line-height: 35px;
+            }
+          }
+        }
+
+        &:hover, &:focus, &:active {
+          
+          
+          > div {
+            .opacity(100);
+            bottom: 0;
+            background: #f7f7f7;
+            opacity: 1;
+            transform: translateY(0%);
+            -webkit-transform: translateY(0%);
+            -webkit-transition: -webkit-transform 0.4s;
+            transition: transform 0.4s;
+
+          }
+
+          img {
+            transform: translateY(-30px);
+            -webkit-transform: translateY(-30px);
+            -webkit-transition: -webkit-transform 0.4s;
+            transition: transform 0.4s;
+          }
+          
+        }
+      }
+
+    }
+  }
+
+}
+
+// ------------------------------------
+// FIX FOR IE 8, 9
+// ------------------------------------
+.ie8,
+.ie9,
+.old-ie {
+
+  .blog-2 .blog-item .item-image, .blog-detail .blog-item .item-image {
+    .clearfix();
+    display: block;
+    min-height: auto !important; 
+  }
+
+  .blog-2 .article-image-intro, 
+  .blog-detail .article-image-intro {
+    max-height: auto !important;
+
+    .clearfix();
+    img {
+      width: 100% !important;
+    }
+  }
+
+  .box-center,
+  #ja-testimonial {
+    margin: 0 auto;
+    text-align: center;
+    float: none; 
+  }
+
+  .ja-client-list {
+    width: 100% !important; 
+    clear: both;
+    .ja-client {
+      width: 19.8%;
+    }
+  }
+
+  .ja-animate {
+    perspective: 0 !important;
+    filter: alpha(opacity=100) !important;
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(enabled = false)";
+    filter: none;
+    .reset-filter();
+    background: transparent !important;
+    .opacity(1);
+  }
+
+  .inview .ja-animate[data-animation="pop-up"] {
+    animation: none;
+    transform-style: none;
+    filter: alpha(opacity=100) !important;
+  }
+
+  .inview .ja-animate[data-delay="200"],
+  .inview .ja-animate[data-delay="400"],
+  .inview .ja-animate[data-delay="600"],
+  .inview .ja-animate[data-delay="800"],
+  .inview .ja-animate[data-delay="1000"] {
+    animation-delay: 0 !important;
+    transform-style: none !important;
+    filter: none;
+    .reset-filter();
+  }
+
+  .ja-animate[data-animation="move-from-right"] {
+    right: 0;
+    .opacity(1);
+  }
+
+  .ja-animate[data-animation="move-from-left"] {
+    left: 0;
+    .opacity(1);
+  }
+
+  .login-wrap .login-right .inner a {
+    color: @white;
+  }
+
+  .footer-info .container .custom {
+    border-bottom: solid 1px #384859;
+  }
+
+  .t3-copyright {
+    border-top: solid 1px #384859;
+  }
+
+  .ja-masonry-wrap .item article .item-image img {
+    height: 100%; 
+    width: 100% !important;
+  }
+
+  .ja-masonry-wrap .item article .article-header {
+    margin-top: 0 !important;
+  }
+
+  .categories-module .project-item .article-content, 
+  ul.categories-module .project-item .article-content, 
+  .category-module .project-item .article-content, 
+  ul.category-module .project-item .article-content {
+    bottom: 0;
+    background: @white;
+  }
+
+  #eblog-wrapper {
+    .blog-topheader .blog-header {
+      > .blog-image {
+        float: none;
+        display: block;
+        img {
+            max-width: auto !important;
+            display: block;
+          }
+      }
+    }
+  }
+
+}

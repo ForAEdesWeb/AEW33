@@ -1,0 +1,176 @@
+
+/**
+ * ------------------------------------------------------------------------
+ * JA Magz Template
+ * ------------------------------------------------------------------------
+ * Copyright (C) 2004-2011 J.O.O.M Solutions Co., Ltd. All Rights Reserved.
+ * @license - Copyrighted Commercial Software
+ * Author: J.O.O.M Solutions Co., Ltd
+ * Websites:  http://www.joomlart.com -  http://www.joomlancers.com
+ * This file may not be redistributed in whole or significant part.
+ * ------------------------------------------------------------------------
+ */
+
+
+
+body.page-error {
+  color: #666;
+  font-family: "Raleway",sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #1BBC9B;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #16987E;
+  text-decoration: none;
+}
+
+
+/* Error code */
+.error-code {
+  color: #16987E;
+  font-size: 350px;
+  font-weight: 800;
+  line-height: 320px;
+  margin-bottom: 10px;
+}
+
+
+/* Error message */
+.error-message h2 {
+  display: block;
+  font-size: 50px;
+  line-height: 1;
+  margin: 0 0 10px;
+  padding: 0;
+}
+
+.error-message p {
+  color: #666;
+  font-size: 180%;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.error-message a {
+}
+
+.error-message a:hover,
+.error-message a:focus, 
+.error-message a:active {
+  text-decoration: underline;
+}
+
+div#errorboxoutline {
+  position: relative;
+  text-align: center;
+}
+
+div.error {
+}
+ 
+div.error .error-code {
+  margin: 150px auto 50px auto;
+  text-align: center;
+}
+
+div.error .error-code span {
+
+}
+
+div.error .error-code span.errorcode-0 {
+
+}
+
+div.error .error-code span.errorcode-last {
+
+}
+
+div.error .error-code span.errorcode-1 {
+}
+
+
+div.error .error-code span.errorcode-2 {
+}
+
+div.error .error-code span.errorcode-3 {
+}
+
+div.error .error-code span.errorcode-4 {
+}
+
+div.error .error-code span.errorcode-5 {
+}
+
+div.error .error-code span.errorcode-6 {
+}
+
+div.error .error-code span.errorcode-7 {
+}
+
+div.error .error-code span.errorcode-8 {
+}
+
+div.error .error-code span.errorcode-9 {
+}
+
+div.error #errorboxbody {
+  margin-top: 15px;
+  color: #888;
+}
+
+div.error #errorboxbody a {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+div.error #errorboxbody a:hover,
+div.error #errorboxbody a:focus, 
+div.error #errorboxbody a:active {
+
+}
+
+div.error .error-message h2 {
+  display: inline-block;
+  font-size: 50px;
+  font-weight: 300;
+  line-height: normal;
+  margin: 0;
+  padding: 0;
+}
+
+div.error-nav ul {
+  font-size: 14px;
+  font-weight: 300;
+  margin: 15px 0 0 !important; 
+  padding: 0 !important;
+}
+
+div.error-nav ul li {
+  display: inline;
+  list-style: none;
+  line-height: 24px;
+}
+
+div.error-nav ul li:first-child {
+  border-left: 0;
+  margin-left: -10px;
+}
+
+div.error-nav ul li a {
+  padding: 0 5px;
+  color: #e73628;
+}
+
+div.error-nav ul li a:hover,
+div.error-nav ul li a:focus, 
+div.error-nav ul li a:active {
+  color: #c62316;
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="j2store" method="upgrade">
+	<name>Report OrderItems</name>
+	<version>1.4</version>
+	<creationDate>May 2014</creationDate>
+	<author>Gokila Priya Bose</author>
+	<authorEmail>supports@j2store.org</authorEmail>
+	<authorUrl>http://www.j2store.org</authorUrl>
+	<copyright>2014-19 Weblogicx India Limited</copyright>
+	<license>GNU General Public License v2</license>
+	<description>COM_J2STORE_PLUGIN_REPORT_ORDERITEMS_DESC</description>	
+	<files>
+		<filename plugin="report_orderitems">report_orderitems.php</filename>
+		<filename>index.html</filename>
+		<folder>report_orderitems</folder>
+	</files>	
+	<config></config>
+</extension>

@@ -1,0 +1,184 @@
+body.com_j2store .page-title {background:url(../images/j2store-icon.png) no-repeat 0 50%;padding-left:50px;}
+@media (max-width: 767px) { body.com_j2store .page-title {background:url(../images/j2store-icon.png) no-repeat center center;padding-left:0; text-indent: -800px} }
+
+
+
+
+/*
+   User panel
+----------------------------------
+*/
+
+.user-panel {
+  padding: 10px 50px;
+  color:#ffffff;
+}
+.user-panel > .info {
+  font-weight: 600;
+  margin-top:32%;
+  font-size: 14px;
+  line-height: 1;
+}
+.social-share {
+    float: right;
+    margin: -35px 10px;
+}
+.social-share .btn{
+	background:transparent;
+	border-color:#808b9c;
+}
+
+
+/*
+   Sidebar menu
+----------------------------------
+*/
+
+.sidebar{
+   background:#23272D;
+}
+.sidebar > .nav-list{
+	padding:0px;
+}
+.sidebar > .nav >li a,
+.j2store-menu-children > li{
+	list-style:none;
+	padding:5px 13px;
+	color:#808b9c;
+}
+.sidebar > .nav >li h3{
+	padding:4px;
+	font-size:14px;
+	border-left:3px solid #1B7ECF;
+}
+.sidebar > .nav >li h4 a,
+.sidebar > .nav >li h3 a{
+	color:#fff;
+	
+}
+.j2store-menu-children{
+	margin:0px;
+}
+.j2store-menu-children >li{
+	border-left:3px solid #23272D;
+}
+.j2store-menu-children >li:hover{
+	background:#181B1F;
+	border-left:3px solid #1B7ECF;
+}
+.sidebar > .nav >li a:hover{
+	color:#ffffff;
+	text-decoration:none;
+}
+.sidebar > .nav > .active,
+.j2store-menu-children > .active{
+	background:#181B1F;
+	border-left:3px solid #1B7ECF;
+	
+}
+.sidebar > .nav >li h4{
+	color:#ffffff;
+	border-left:3px solid #1B7ECF;
+	padding:5px 13px;
+}
+.dropdown h4{
+	margin:0px;
+}
+/*
+    j2store admin:Copyrights
+----------------------------------
+*/
+
+.j2store-copyrights{
+  background:#181B1F;
+  color:#808b9c;
+  text-align:center;
+  padding:10px;
+}
+.j2store .table-bordered{
+	border-radius:0px;
+}
+
+/*
+    j2store admin:Mini Statics
+----------------------------------
+*/
+
+.j2store_stat-mini{
+	color:#ffffff;
+	margin-bottom:20px;
+}
+.j2store-stats-mini-badge{
+	padding:24px;
+}
+.j2store-mini-price{
+	font-size: 34px;
+    font-weight: 300;
+    letter-spacing: -1px;
+    line-height: 36px;
+    margin-bottom: 0;
+    padding-top: 25px;
+    text-align: right;
+	
+}
+.j2store-stats-mini-badge h3{
+	font-size:16px;
+	font-weight:300;
+}
+.j2store-stats-mini-orders{
+  background:#E66454;	
+}
+.j2store-stats-mini-this-month{
+	background:#857198;
+}
+.j2store-stats-mini-yesterday{
+	background:#F4B04F;
+}
+.j2store-stats-mini-today{
+	background:#44B6AE;
+}
+/*
+    j2store admin:Chart
+----------------------------------
+*/
+
+.j2store .chart{
+	margin-bottom:20px;
+}
+/*
+    j2store admin:Latest Order
+----------------------------------
+*/
+
+.j2store .latest_orders h3,
+.j2store .j2store_statistics h3{
+	background: #39393D;
+	color:#ffffff;
+	padding: 11px 20px 9px;
+    position: relative;
+    margin:0px;
+    font-size: 13px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+.j2store .latest_orders .fa,
+.j2store .j2store_statistics .fa{
+	padding:5px;
+}
+
+#attribute_options_table,
+.j2product-additional_images,
+.j2store_itemfiles
+ {
+	display: block;
+	width: 100%;
+	clear: both;
+}
+
+#jform_attribs_j2product-lbl {
+	display: none;
+}
+
+#j2store-submenu li.dropdown {
+	display: block;
+}

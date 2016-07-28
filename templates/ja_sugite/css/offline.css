@@ -1,0 +1,259 @@
+/**
+ * @copyright	Copyright (C) 2005 - 2012 Open Source Matters, Inc. All rights reserved.
+ * @license		GNU General Public License version 2 or later; see LICENSE.txt
+ */
+
+body {
+  background: #2C3E50;
+  color: #666;
+  font-family: "Raleway",sans-serif;
+  font-size: 14px;
+  height: 100%;
+  line-height: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+div#system-message .alert {
+  color: #333;
+}
+
+dl#system-message .error {
+  color: #cc3300;
+}
+
+/* Style for Message */
+dl#system-message,
+div#system-message .alert {
+  background: #f5f5f5;
+  border-radius: 0 0 3px 3px;
+  border: solid 1px #eaeaea;
+  margin-bottom: 0;
+  margin-top: 15px;
+  -moz-border-radius: 0 0 3px 3px;
+  padding: 10px;
+  -webkit-border-radius: 0 0 3px 3px;
+}
+
+form {
+  margin: auto;
+}
+
+form fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+form p {
+  margin: 0 0 15px;
+  padding: 0;
+}
+
+img {
+  border: 0 none;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+}
+
+label {
+  color: #333;
+  display: inline-block;
+  font-weight: normal;
+  margin-bottom: 8px;
+}
+
+/* Offline wrap */
+.offline-page {
+  background: #fff;
+  border-radius: 2px;
+  margin: 100px auto 0;
+  padding: 30px 30px 0;
+  -wekbit-border-radius: 2px;
+  width: 500px;
+}
+
+/* Brand */
+.offline-page .brand {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.offline-page .brand a {
+  background: url(../images/logo-offline.png) no-repeat left top;
+  display: block;
+  height: 50px;
+  margin: 0 auto;
+  overflow: hidden;
+  text-indent: -999em;
+  width: 50px;
+}
+
+/* Offline message */
+.offline-page .offline-message {
+  font-size: 14px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Login form */
+.offline-page form {
+  margin: 0 -30px;
+  padding: 0 30px;
+}
+
+.offline-page .wrap-input {
+  overflow: hidden;
+}
+
+.offline-page .wrap-input p {
+  display: block;
+  float: right;
+  width: 48%;
+}
+
+.offline-page .wrap-input input {
+  background: #fff;
+  border: 2px solid #ccc;
+  box-shadow: none;
+  color: #666;
+  height: 38px;
+  line-height: normal;
+  padding: 5px 10px;
+  -webkit-appearance: none !important;
+  -webkit-box-shadow: none;
+  width: 95%;
+}
+
+.offline-page .wrap-input input:hover,
+.offline-page .wrap-input input:focus {
+  border-color: #2ECC71;
+  outline: none;
+}
+
+.offline-page #form-login-remember {
+  background: #fcfcfc;
+  border-radius: 0 2px 2px 0;
+  border-top: 1px solid #eaeaea;
+  margin: 30px -30px 0;
+  overflow: hidden;
+  padding: 20px 30px;
+  -webkit-border-radius: 0 2px 2px 0;
+}
+
+.offline-page #form-login-remember label {
+  color: #666;
+  vertical-align: text-top;
+  font-size: 14px;
+  text-transform: none;
+}
+
+.offline-page #form-login-remember #remember,
+.offline-page #form-login-remember #remember:hover,
+.offline-page #form-login-remember #remember:focus,
+.offline-page #form-login-remember #remember:active {
+  border: none;
+  display: inline-block;
+  height: auto;
+  line-height: auto;
+  margin: 0 5px 0 0;
+  outline: none;
+  outline-offset: 0;
+  padding: 0;
+  vertical-align: middle;
+  width: auto;
+}
+
+
+.offline-page .button {
+  background-color: #1BBC9B;
+  border: none;
+  color: #fff;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  float: right;
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin: 0;
+  padding: 10px 20px;
+  text-transform: uppercase;
+}
+
+.offline-page .button:hover, 
+.offline-page .button:focus, 
+.offline-page .button:active {
+  background-color: #16987E;
+}
+
+/* System message */
+#system-message-container {
+  padding-bottom: 20px;
+}
+
+#system-message dd {
+  margin: 0 0 0 10px;
+}
+
+#system-message dt {
+  font-weight: bold;
+}
+
+#system-message ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.offline-page .alert .close {
+  float: right;
+  height: 16px;
+  width: 16px;
+}
+
+.offline-page div#system-message .alert h4 {
+  margin-bottom: 5px;
+  margin-top: 0;
+}
+
+#frame img {
+  height: auto;
+  margin-bottom: 15px;
+  max-width: 100%;
+}
+
+div#system-message .alert .close{
+  float: left;
+  margin-right: 10px;
+}
+
+div#system-message .alert h4 {
+  margin: 0;
+}
+
+form br, .offline-page .offline-message br {
+  display: none;
+}
+
+.offline-page .wrap-input p:first-child, html[dir="rtl"] .offline-page #form-login-remember .button {
+  float: left;
+}
+
+html[dir="rtl"] #frame form {
+  text-align: inherit;
+}
+
+
+html[dir="rtl"] .wrap-offline-message h1 {
+  background-position: left top;
+  padding-left: 0;
+  padding-right: 50px;
+  text-align: right;
+}
+
+
+
+html[dir="rtl"] .offline-page .button {
+  float: left;
+}

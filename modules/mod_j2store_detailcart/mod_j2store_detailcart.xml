@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" method="upgrade"
+	client="site">
+	<name>J2Store Detail Cart Advanced</name>
+	<creationDate>April 2015</creationDate>
+	<author>ThemeParrot</author>
+	<copyright>Copyright (c) 2014 - 2019 ThemeParrot Private Ltd. All
+		rights reserved.</copyright>
+	<authorEmail>support@themeparrot.com</authorEmail>
+	<authorUrl>http://themeparrot.com</authorUrl>
+	<version>1.5</version>
+	<description>
+	 <![CDATA[<p>J2Store Detail Cart Advanced module. Sponsored by <a href="http://themeparrot.com">ThemeParrot</a>, makers of premium Joomla templates</p>]]>
+	</description>
+	<scriptfile>script.mod_j2store_detailcart.php</scriptfile>
+	<files>
+		<filename module="mod_j2store_detailcart">mod_j2store_detailcart.php</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<filename>helperv2.php</filename>
+		<filename>helperv3.php</filename>
+		<filename>mod_j2store_detailcart.xml</filename>
+		<folder>tmpl</folder>
+		<folder>css</folder>
+	</files>
+
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.mod_j2store_detailcart.ini</language>
+		<language tag="en-GB">en-GB/en-GB.mod_j2store_detailcart.sys.ini</language>
+	</languages>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="moduleclass_sfx" type="text" default=""
+					label="Module Class Suffix"
+					description="A suffix to be applied to the css class of the module (table.moduletable), this allows individual module styling" />
+
+				<field name="show_estimator" type="radio" default="1" class="btn-group"
+					label="j2store_conf_show_estimator_cart_label" description="j2store_conf_show_estimator_cart_desc">
+					<option value="1">JSHOW</option>
+					<option value="0">JHIDE</option>
+				</field>
+
+				<field name="show_table_header" type="radio" default="1"
+					class="btn-group" label="j2store_show_table_header_label"
+					description="j2store_show_table_header_desc">
+					<option value="1">JSHOW</option>
+					<option value="0">JHIDE</option>
+				</field>
+
+				<field name="show_thumb_cart" type="list" default="intro"
+					label="j2store_conf_show_thumb_cart_label" description="j2store_conf_show_thumb_cart_desc">
+					<option value="within_text">j2store_conf_image_within_article</option>
+					<option value="intro">j2store_conf_intro_Image</option>
+					<option value="fulltext">j2store_conf_full_article_image</option>
+					<option value="0">j2store_conf_never_show_thumbnail</option>
+				</field>
+
+				<field name="cartimage_size" type="radio" default="Small"
+					class="btn-group" label="j2store_conf_cartimage_size_label"
+					description="j2store_conf_cartimage_size_desc">
+					<option value="Small">J2STORE_CONF_CARTIMAGE_SIZE_SMALL</option>
+					<option value="Medium">J2STORE_CONF_CARTIMAGE_SIZE_MEDIUM</option>
+					<option value="Large">J2STORE_CONF_CARTIMAGE_SIZE_LARGE</option>
+				</field>
+
+				<field name="show_product_name" type="radio" default="1"
+					class="btn-group" label="j2store_show_product_name_label"
+					description="j2store_show_product_name_desc">
+					<option value="1">JSHOW</option>
+					<option value="0">JHIDE</option>
+				</field>
+
+				<field name="show_product_options" type="radio" default="1"
+					class="btn-group" label="j2store_show_product_options_label"
+					description="j2store_show_product_options_desc">
+					<option value="1">JSHOW</option>
+					<option value="0">JHIDE</option>
+				</field>
+
+
+				<field name="show_product_qty" type="radio" default="1"
+					class="btn-group" label="j2store_show_product_qty_label"
+					description="j2store_show_product_qty_desc">
+					<option value="1">JSHOW</option>
+					<option value="0">JHIDE</option>
+				</field>
+
+				<field name="show_product_sku" type="radio" default="1"
+					class="btn-group" label="j2store_show_product_sku_label"
+					description="j2store_show_product_sku_desc">
+					<option value="1">JSHOW</option>
+					<option value="0">JHIDE</option>
+				</field>
+
+				<field name="show_product_price" type="radio" default="1"
+					class="btn-group" label="j2store_show_product_price_label"
+					description="j2store_show_product_price_desc">
+					<option value="1">JSHOW</option>
+					<option value="0">JHIDE</option>
+				</field>
+
+				<field name="show_shipping_country" type="radio" default="1"
+					class="btn-group" label="J2STORE_SHOW_SHIPPING_COUNTRY_LABEL"
+					description="J2STORE_SHOW_SHIPPING_COUNTRY_DESC">
+					<option value="1">JSHOW</option>
+					<option value="0">JHIDE</option>
+				</field>
+
+				<field name="show_shipping_zone" type="radio" default="1"
+					class="btn-group" label="J2STORE_SHOW_SHIPPING_ZONE_LABEL"
+					description="J2STORE_SHOW_SHIPPING_DESC">
+					<option value="1">JSHOW</option>
+					<option value="0">JHIDE</option>
+				</field>
+
+
+				<field name="show_shipping_postcode" type="radio" default="1"
+					class="btn-group" label="J2STORE_SHOW_SHIPPING_POSTCODE_LABEL"
+					description="J2STORE_SHOW_SHIPPING_POSTCODE_DESC">
+					<option value="1">JSHOW</option>
+					<option value="0">JHIDE</option>
+				</field>
+
+				<field name="show_checkout" type="radio" default="1" class="btn-group"
+					label="J2STORE_SHOW_CHECKOUT_BUTTON_LABEL" description="J2STORE_SHOW_CHECKOUT_BUTTON_LABEL">
+					<option value="1">J2STORE_SHOW_CHECKOUT_ALL_THE_TIME</option>
+					<option value="2">J2STORE_SHOW_CHECKOUT_ONLY_WITH_SHIPPING_SELECTION</option>
+				</field>
+
+				<field name="show_qty_update" type="radio" default="1" class="btn-group"
+					label="J2STORE_SHOW_QUANTITY_UPDATE_LABEL" description="J2STORE_SHOW_QUANTITY_UPDATE_LABEL_DESC">
+					<option value="1">JSHOW</option>
+					<option value="0">JHIDE</option>
+				</field>
+
+				<field name="show_remove_cart" type="radio" default="1"
+					class="btn-group" label="J2STORE_SHOW_REMOVE_CART_LABEL"
+					description="J2STORE_SHOW_REMOVE_CART_LABEL_DESC">
+					<option value="1">JSHOW</option>
+					<option value="0">JHIDE</option>
+				</field>
+
+
+			</fieldset>
+		</fields>
+	</config>
+</extension>

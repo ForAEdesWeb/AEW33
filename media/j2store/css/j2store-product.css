@@ -1,0 +1,162 @@
+@CHARSET "UTF-8";
+
+.j2store-product-mainlist {	
+}
+.j2store-detail-product {
+	padding: 10px 15px;
+}
+
+.j2store-filters-selection{
+	display: inline; 
+    width: 60%;
+}
+.j2store-filter-lists{
+	margin:0 0 10px;
+}
+.j2store-products{
+	margin-top:10px;
+}
+.j2store-product-result-display{
+	margin:20px 0 58px 0;
+}
+.j2store-product-result-text{
+	float:left;
+}
+.j2store-product-sorting{
+	float:right;
+}
+.j2store-product-single {
+	max-width:100%;
+	height:auto;
+	border:1px solid #CCCCCC;
+	margin:5px;
+	padding:10px;
+}
+.j2store-filter-lists li,
+.j2store-item-additionalimages-list li{
+	list-style:none;
+	display:inline;
+} 
+.j2store-product-footer{
+	text-align:center;
+}
+.j2store-product-single-detail,
+.j2store-product-general-details{
+	line-height:24px;
+	
+}
+.j2store-product-single-detail a{
+ 	font-size:16px;
+}
+.j2store-product-item-label,
+.j2store-product-item-select-label,
+.j2store-product-item-radio-label,
+.j2store-product-item-checkbox-label{
+	font-weight:bold;
+}
+.j2store-product-options .j2store-product-option-radio,
+.j2store-product-options .j2store-product-checkbox-option {
+	padding:0px;
+}
+.j2store-product-option-radio label,
+.j2store-product-checkbox-option label{
+	display:inline-block;
+}
+.j2store-product-options .radio input[type="radio"], 
+.j2store-product-options .checkbox input[type="checkbox"]{
+	margin:5px;
+	float: none;
+}
+.j2store-product-select-option,
+.product-discount-offer{
+	display:block;
+}
+.product-discount-offer,
+.j2store-discount-price,
+.offer-price{
+	color:#d35400;
+}
+
+.j2store-discount-price{
+   display:inline;
+   font-weight:bold;
+   font-size:16px;	
+}
+.product-special-price{
+	font-size:18px;
+	font-weight:bold;
+}
+.j2store-product-general-details .product-special-price{
+	float:right;
+	font-size:26px;
+}
+.j2store-product-item-label.offer-badge{
+	float:right;
+}
+.j2store-item-specialprice-text strike,
+.j2store-product-options .required,
+.product-price strike{
+	color:#FF0000;
+}
+.input-mini.j2store-product-qtybox,
+#j2store-product_quantity_input > input,
+.input.j2store-product-search-textbox{
+	display:inline;
+}
+.j2store-product-options{
+	margin-bottom:20px;
+}
+
+.j2store-product-quantity-input ul.quantity-icon {
+	list-style-type:none !important;
+	cursor:pointer;
+	margin: 0;
+	padding: 0 !important;
+	margin:-2px 5px 0px 5px !important;
+	display:inline;
+	position:absolute;
+	background: none;
+}
+.button{
+	border:none;
+	padding:10px 20px;
+	background:#3498db;
+	color:#FFFFFF;
+    font-weight:bold;	
+}
+.button:hover{
+	background:#2980b9;
+}
+.j2store-product-add-info{
+	margin-top:40px;
+}
+.j2store-product-heading{
+	font-size:20px;
+	font-weight:bold;
+}
+.j2store-item-productlist-thumbimage,
+.j2store-item-product-thumbimage
+{
+	height: auto;
+}
+
+.j2store-item-additionalimages-list {
+	margin-top: 20px;
+}
+
+.j2store-item-additionalimages-list img {
+border: 1px solid #ccc;
+padding: 5px;	
+}
+.j2store-filter-sorting,
+.j2store-filter-product-search {
+	display: inline-block;
+}
+
+.j2store-category-icon {
+	display: block;
+	float: left;
+	max-width: 50px;
+	max-height: 50px;
+}
+

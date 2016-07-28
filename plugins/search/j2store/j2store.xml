@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="search" method="upgrade">
+    <name>Search - J2Store</name>
+    <version>1.0</version>
+	<creationDate>October 2014</creationDate>
+	<author>Gokila Priya Bose</author>
+	<authorEmail>supports@j2store.org</authorEmail>
+	<authorUrl>http://www.j2store.org</authorUrl>
+	<copyright>2014-19 WeblogicxIndia</copyright>
+	<license>GNU General Public License v2</license>
+	<description>PLG_SEARCH_J2STORE_XML_DESCRIPTION</description>
+    <files>
+        <filename plugin="j2store">j2store.php</filename>
+    </files>
+    <languages folder="languages">
+		<language tag="en-GB">en-GB.plg_search_j2store.ini</language>
+	</languages>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="search_limit" type="text" size="5" default="50" label="K2_SEARCH_LIMIT" description="K2_THE_NUMBER_OF_ITEMS_TO_RETURN_WHEN_PERFORMING_A_SEARCH"/>
+                <field name="search_tags" type="radio" default="0" label="K2_ENABLE_SEARCHING_IN_TAGS" description="K2_SELECT_IF_YOU_WANT_TO_SEARCH_ITEMS_TAGS_NOTE_THAT_THIS_CAN_BE_VERY_SLOW_ON_LARGE_SITES">
+                    <option value="0">K2_NO</option>
+                    <option value="1">K2_YES</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>

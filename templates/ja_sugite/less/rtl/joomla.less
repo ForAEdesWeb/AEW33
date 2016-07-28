@@ -1,0 +1,63 @@
+// ---------------------------------------------------------
+// SMART SEARCH
+// ---------------------------------------------------------
+
+.off-canvas body > .autocompleter-choices {
+  width: 0px;
+  left: auto;
+}
+
+.article-intro,
+.article-content {
+
+  // Add proper margin
+  img[align=left],
+  .img_caption.left,
+  .pull-left.item-image {
+    margin: 0 @t3-global-margin*1.5 @t3-global-margin 0;
+  }  
+
+  img[align=right],
+  .img_caption.right,
+  .pull-right.item-image {
+    margin: 0 0 @t3-global-margin @t3-global-margin*1.5 ;
+  }
+
+}
+
+.ie8 {
+  .article-content .img_caption.right {
+    margin-left: @t3-global-margin*1.5;
+    margin-right: 0;
+    img {
+      margin: 0;
+    }
+  }
+
+  .article-content img[align=right] {
+    margin-left: @t3-global-margin*1.5;
+    margin-right: 0;
+  }
+}
+
+//category
+.tag-category .tag-body img {
+  margin-left: @t3-global-margin;
+  margin-right: 0;
+}
+
+ul.category-module .article-meta {
+  .mod-articles-category-date,.fa-clock-o {
+    float: right;
+  }
+}
+
+#login-form {
+  .unstyled .fa-arrow-right {
+    transform: rotatey(180deg);
+  } 
+}
+
+.portfolio-list-info li .fa {
+  margin-left: @t3-global-margin/2;
+}

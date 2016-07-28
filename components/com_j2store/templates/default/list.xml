@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+         <view title="COM_J2STORE_PRODUCTS">
+        <message><![CDATA[COM_J2STORE_PRODUCTS]]></message>
+  	  </view>
+
+        <layout title="J2STORE_PRODUCT_LIST">
+                <message>
+                        <![CDATA[J2STORE_PRODUCTS_LIST_LAYOUT_DESC]]>
+                </message>
+        </layout>
+      	<params>
+      		
+      		<fields name="params">
+				<fieldset name="basic"  addfieldpath="/administrator/components/com_j2store/models">
+					<field name="page_limit" type="text" default="20" description="J2STORE_PRODUCT_LAYOUT_PAGE_LIMIT_DESC" label="J2STORE_PRODUCT_LAYOUT_PAGE_LIMIT"/>
+					<field name="j2store_product_layout" type="layoutlist" default="1" description="J2STORE_PRODUCT_LAYOUT_LIST_DESC" label="J2STORE_PRODUCT_LAYOUT_LIST"/>
+   				</fieldset>
+			    <fieldset  name="basic" addfieldpath="administrator/components/com_j2store/models/fields/"> 
+					<field name="sub_template"						
+						edit="true" 
+						type="templatelist"  default=""  description="J2STORE_PRODUCT_LAYOUT_TEMPLATE_DESC" label="J2STORE_PRODUCT_LAYOUT_TEMPLATE"/>
+					</fieldset>
+				</fields>
+		  	</params>
+ </metadata>

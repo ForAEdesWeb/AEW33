@@ -1,0 +1,221 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+
+// VARIABLES & MIXINS
+// ------------------
+@import "vars.less"; // Modify this for custom colors, font-sizes, etc
+
+.ja-ss-slideshow {
+	position: relative;
+	height: 309px;
+}
+
+.ja-slideshow .container {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  height: 100%;
+
+  @media (min-width: @screen-sm-min) {
+    margin-left: -((@container-sm - @grid-gutter-width) / 2);
+    width: @container-sm - @grid-gutter-width;
+  }
+  @media (min-width: @screen-md-min) {
+    margin-left: -((@container-md - @grid-gutter-width) / 2);
+    width: @container-md - @grid-gutter-width;
+  }
+  @media (min-width: @screen-lg-min) {
+    margin-left: -((@container-lg - @grid-gutter-width) / 2);
+    width: @container-lg - @grid-gutter-width; 
+  }
+
+}
+
+.ja-ss-loading:before {
+	content: "";
+	display: block;
+	background: url("@{t3-image-path}/slideloading.gif") no-repeat center center;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 5;
+}
+ 
+.ja-ss-wrap {
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+}
+
+.ja-ss-items {
+	width: 100%;
+}
+
+.ja-ss-item {
+	display: block;
+	float: left;
+	margin: 0;
+	overflow: hidden;
+	position: absolute;
+	right: 0;
+	left: 0;
+	width: 100%;
+	min-height: 260px;
+	z-index: 1;
+	backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+}
+
+.ja-ss-item.prev {
+	display: block;
+}
+
+.ja-ss-item.next {
+	display: block;
+}
+
+.ja-ss-item.curr {
+	z-index: 2; /* IE7,8 */
+}
+
+.ja-ss-item img {
+	background: #fff;
+	width: 100%;
+	max-width: 100%;
+}
+
+.ja-ss-mask {
+}
+
+.ja-ss-mask.active {
+}
+
+.ja-ss-desc {
+	position: absolute;
+	left: 20px;
+	top: 48%;
+	width: 60%;
+	padding: 10px;
+	color: #000;
+	font-size: 12px;
+	line-height: 18px;
+	text-align: left;
+}
+
+.ja-ss-desc h3 {
+	line-height: 1.4;
+	margin: 0;
+}
+
+.ja-ss-desc h3 a {
+	color: inherit;
+	line-height: normal;
+	text-decoration: none;
+}
+
+.ja-ss-desc p {
+	font-size: 12px;
+	line-height: 18px;
+	margin: 10px 0;
+}
+
+// Thumbnails
+.ja-ss-thumbs-wrap {
+  background: none;
+  position: absolute;
+  bottom: 0;
+  z-index: 999;
+  bottom: 0;
+  clear: both;
+  height: 72px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.ja-ss-thumbs {
+  width: 200px;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  margin-left: -100px;
+
+  .ja-ss-thumb {
+    width: 10px;
+    height: 10px;
+    border: 0;
+    background: url("@{t3-image-path}/ja-ss-thumb.png");
+    background-clip: padding-box;
+    cursor: pointer;
+    display: inline-block;
+    margin: 5px 3px;
+    overflow: hidden;
+    text-align: center;
+    vertical-align: bottom;
+    .opacity(0.6);
+
+    &.active {
+      border: 0;
+      .opacity(1);
+    }
+  }
+}
+
+// Navigations
+.ja-ss-btns {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  display: none;
+
+  span {
+    background: url("@{t3-image-path}/ctrl-btns.png") no-repeat scroll left top rgba(0, 0, 0, 0);
+    color: @white;
+    cursor: pointer;
+    display: block;
+    margin: 0 5px 0 0;
+    padding: 0;
+    text-indent: -999em;
+    position: absolute;
+    float: none;
+    width: 22px;
+    height: 61px;
+    z-index: 2;
+  }
+
+  .ja-ss-prev {
+    left: 0;
+    margin-left: @t3-global-margin;
+
+    &:hover {
+      background-position: 0 -61px;
+    }
+  }
+
+  .ja-ss-next {
+    right: 0;
+    margin-right: @t3-global-margin;    
+    background-position: -22px 0;
+
+    &:hover {
+      background-position: -22px -61px;
+    }
+  }
+}
+
+.ja-slideshow:hover .ja-ss-btns {
+  display: block;
+}
+
+/* dynamic classes */
+.ja-ss-thumb-height {
+
+}
+
+.ja-ss-thumb-width {
+
+}
